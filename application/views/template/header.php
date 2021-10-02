@@ -64,11 +64,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <a class="nav-link" href="<?= base_url('transaksi'); ?>">Cek Resi</a>
                                 </nav>
                             </div>
-                            
-                            <a class="nav-link" href="<?= base_url('rekap'); ?>">
-                                <div class="sb-nav-link-icon"><i class="fas fa-clipboard"></i></div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseRekap" aria-expanded="false" aria-controls="collapseRekap">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Rekap
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            <div class="collapse" id="collapseRekap" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="<?= base_url('rekap'); ?>">Laporan</a>
+                                    <a class="nav-link" href="<?= base_url('rekap/hasil'); ?>">Hasil Tracking</a>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

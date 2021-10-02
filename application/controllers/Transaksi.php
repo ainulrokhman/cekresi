@@ -27,7 +27,7 @@ class Transaksi extends CI_Controller {
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "waybill=002746676927&courier=sicepat",
+            CURLOPT_POSTFIELDS => "waybill=002746676927&courier=SDS",
             CURLOPT_HTTPHEADER => array(
                 "content-type: application/x-www-form-urlencoded",
                 "key: 89764b0ef8bb10bca8e48175d4b573d8"
@@ -94,7 +94,7 @@ class Transaksi extends CI_Controller {
         }
 
         $this->transaksi->insert($result);
-        redirect(base_url());
+        // redirect(base_url());
     }
 
     public function delete()

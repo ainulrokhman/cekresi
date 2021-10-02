@@ -28,7 +28,9 @@ class TransaksiModel extends CI_Model {
             }
         }
 
-        $this->db->insert_batch('transaksi', $post);
+        foreach ($post as $key) {
+            $this->db->insert('transaksi', $key);
+        }
     }
 
     // ===============================================================================

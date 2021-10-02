@@ -33,7 +33,7 @@ class AuthModel extends CI_Model {
     
     function getStatus($courier, $awb, $token)
     {
-        if ($courier === 'jne' || $courier === 'anteraja') {
+        if ($courier === 'jne') {
             $url = "https://resi.id/api/track?courier=$courier&awb=$awb";
             $ch = curl_init($url);
             $headers = [];

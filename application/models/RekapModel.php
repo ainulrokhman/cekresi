@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class RekapModel extends CI_Model {
 
+    public $table;
+
     public function insert()
     {
         $this->db->insert('rekap', $_POST);
@@ -14,7 +16,16 @@ class RekapModel extends CI_Model {
 
     // ===============================================================================
     // dataTables
-    var $table = 'trx_selesai';
+    
+    public function table($table)
+    {
+        $this->table = $table;
+    }
+
+    public function getTable()
+    {
+        echo $this->table;
+    }
 
     private function _getData()
     {

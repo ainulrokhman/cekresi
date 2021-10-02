@@ -82,8 +82,10 @@ $(document).ready(function () {
             return "<span class='badge bg-danger'>Tidak terlacak!</span><br>" + crud;
         } else {
             if (resi.status === "DELIVERED") {
+                insertRekap(resi, data_rekap);
                 return '<span class="badge bg-success">'+resi.status+'</span>';
             } else if (resi.status === "RETURNED"){
+                insertRekap(resi, data_rekap);
                 return '<span class="badge bg-warning">'+resi.status+'</span>';            
             } else {
                 return '<span class="badge bg-info text-dark">'+resi.status+'</span>' + crud;
@@ -115,8 +117,8 @@ $(document).ready(function () {
     function insertRekap(resi, data_rekap) {
         let data = {
             id_trx: data_rekap.id,
-            tanggal: resi.history.at(-1).date,
-            keterangan: resi['actual_latest_status']['message'],
+            tanggal: '',
+            keterangan: '',
             status: resi.status
         }
 
