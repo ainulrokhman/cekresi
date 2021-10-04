@@ -34,6 +34,6 @@
         </div>
     </div>
     <?php if(isset($hapus)): ?>
-        <div class="btn btn-danger" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Hapus Kolom</div>
+        <div class="btn btn-danger w-25" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Hapus Kolom</div>
     <?php endif; ?>
 </div>

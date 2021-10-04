@@ -15,31 +15,6 @@ class Transaksi extends CI_Controller {
         $this->load->model('TransaksiModel', 'transaksi');
 	}
 
-    public function test()
-    {
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://pro.rajaongkir.com/api/waybill",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "waybill=002746676927&courier=SDS",
-            CURLOPT_HTTPHEADER => array(
-                "content-type: application/x-www-form-urlencoded",
-                "key: 89764b0ef8bb10bca8e48175d4b573d8"
-            ),
-        ));
-        
-
-        $response = json_decode(curl_exec($curl), true);
-
-        var_dump($response);
-    }
-
 	public function index()
 	{
 		$data['title'] = 'Halaman Utama';
@@ -94,7 +69,7 @@ class Transaksi extends CI_Controller {
         }
 
         $this->transaksi->insert($result);
-        // redirect(base_url());
+        redirect(base_url('rekap'));
     }
 
     public function delete()

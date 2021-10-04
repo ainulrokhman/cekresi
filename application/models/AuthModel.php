@@ -58,8 +58,8 @@ class AuthModel extends CI_Model {
                 $result = [
                     'code' => 200,
                     'status' => $result['status'],
-                    'selesai' => $result['status'] === "RETURNED" ? true :
-                        $result['status'] === "DELIVERED" ? true : false ,
+                    'selesai' => ($result['status'] === "RETURNED" ? true :
+                        $result['status'] === "DELIVERED") ? true : false ,
                 ];                
             }
 

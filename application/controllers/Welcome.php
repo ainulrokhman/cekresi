@@ -49,7 +49,7 @@ class Welcome extends CI_Controller {
 			$row[] = $result->marketing;
 			$row[] = $result->obat;
 			$row[] = $result->awb;
-			$row[] = "<div class='$result->awb text-center'><div class='spinner-grow spinner-grow-sm text-primary' role='status'><span class='visually-hidden'>Loading...</span></div><div class='spinner-grow spinner-grow-sm text-secondary' role='status'><span class='visually-hidden'>Loading...</span></div><div class='spinner-grow spinner-grow-sm text-success' role='status'><span class='visually-hidden'>Loading...</span></div></div>";
+			$row[] = "<div class='$result->awb text-center'><div class='spinner-grow spinner-grow-sm text-primary' role='status'><span class='visually-hidden'>Loading...</span></div><div class='spinner-grow spinner-grow-sm text-secondary' role='status'><span class='visually-hidden'>Loading...</span></div><div class='spinner-grow spinner-grow-sm text-success' role='status'><span class='visually-hidden'>Loading...</span></div><small><span role='button' onclick='return hapus($result->id)' class='badge bg-danger'>Hapus</span><a href='http://localhost/cekresi/transaksi/edit/$result->id'><span class='badge bg-info'>Edit</span></a></small></div>";
 			$data[] = $row;
 		}
 
