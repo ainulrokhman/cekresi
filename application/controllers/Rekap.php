@@ -12,7 +12,7 @@ class Rekap extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Halaman Utama';
+		$data['title'] = 'Laporan';
 		$data['css'][] = base_url('assets/css/dataTables.bootstrap4.min.css');
 		$data['css'][] = base_url('assets/css/datepicker.css');
 		$data['css'][] = 'https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css';
@@ -33,7 +33,7 @@ class Rekap extends CI_Controller {
 
 	public function hasil()
 	{		
-		$data['title'] = 'Halaman Utama';
+		$data['title'] = 'Hasil Tracking';
 		$data['css'][] = base_url('assets/css/dataTables.bootstrap4.min.css');
 		$data['css'][] = base_url('assets/css/datepicker.css');
 		$data['css'][] = 'https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css';
